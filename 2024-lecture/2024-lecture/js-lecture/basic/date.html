@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/layout.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="" />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        height: 100vh;
+        background-color: #333;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+        font-size: 4vw;
+        font-family: "Noto Sans KR";
+      }
+      h1 {
+        font-weight: 100;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 class="date-box">
+      <span class="date"></span>
+      <span class="time"></span>
+    </h1>
+    <script>
+      // 시분초가 10 미만일 경우 앞에 0을 붙이는 함수
+      const AddingZeroAtTime = function (num) {
+        // if (num < 10) {
+        //   num = "0" + num;
+        // }
+        return num < 10 ? "0" + num : num; // 삼항연산자, 위의 것과 기능동일
+      };
+      console.log(AddingZeroAtTime(5));
+      const getCurrentDate = function () {
+        const current = new Date();
+        const year = current.getFullYear();
+        let month = AddingZeroAtTime(current.getMonth() + 1);
+        // if (month < 10) {
+        //   month = "0" + month;
+        // }
+        let date = AddingZeroAtTime(current.getDate());
+
+        let hour = AddingZeroAtTime(current.getHours());
+
+        let minute = AddingZeroAtTime(current.getMinutes());
+
+        let second = AddingZeroAtTime(current.getSeconds());
+
+        const myDate = document.querySelector(".date");
+        const myTime = document.querySelector(".time");
+
+        myDate.textContent = year + "." + month + "." + date;
+        myTime.textContent = hour + ":" + minute + ":" + second;
+      };
+      // 함수를 만들어서 매개변수가 10보다 작으면 "0"을 붙여서 리턴하는 기능을 추가해보자.
+
+      setInterval(getCurrentDate, 1000); // 1초마다 한번씩 함슈를 브라우저가 호출함
+      // 주의: 함수옆에 () 붙이면 한번만 실행됨, 브라우저가 자동 호출 불가
+    </script>
+  </body>
+</html>

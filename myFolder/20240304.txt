@@ -1,0 +1,10 @@
+css framework(자유도가 낮다) vs library(자유도 높음)
+
+framework: 밀키트
+library: 원재료
+
+framework의 장점: 균일한 품질의 앱이나 프레임 제작 가능
+회사에서 나만의 코드를 짠다? 변수명 aaaaa bbbb sadfabsvxf ㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋ
+
+설정 emmet => ctrl shift w : div 설정 추가 간편하게 가능
+                      ctrl shift r : 원하는 div 설정에 

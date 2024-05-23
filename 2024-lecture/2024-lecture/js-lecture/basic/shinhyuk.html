@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
+    <title>Document</title>
+  </head>
+
+  <body>
+    <div class="chart-box">
+      <canvas id="myChart"></canvas>
+    </div>
+  </body>
+  <div class="searchBox">
+    <input type="text" name="" id="" class="searchInput" />
+    <button class="btn-search">검색</button>
+  </div>
+  <script>
+    const ctx = $("#myChart").get();
+    let searchWord;
+
+    let myChart = null;
+
+    const airCheck = function () {
+      let labelList = [];
+      let airArray = [];
+      let dataList = [];
+
+      $.ajax({
+        url: `https://apis.data.go.kr/B552584/ArpltnInforInqireSvc/getCtprvnRltmMesureDnsty?serviceKey=1mSfMtBXPA2bBHNy93lrAwhF7YesVV%2FFJxBeo5GdqkJcrI%2BiCLDiJjiElEhl7120rENEZ%2Brc0WyStTurLeNTJg%3D%3D&returnType=json&numOfRows=100&pageNo=1&sidoName=${searchWord}&ver=1.0`,
+        // data: {
+        //     serviceKey: "1mSfMtBXPA2bBHNy93lrAwhF7YesVV%2FFJxBeo5GdqkJcrI%2BiCLDiJjiElEhl7120rENEZ%2Brc0WyStTurLeNTJg%3D%3D?" ,
+        //     returnType: "json",
+        //     numOfRows: "100",
+        //     pageNo: "1",
+        //     sidoName:"%EC%A0%84%EB%82%A8",
+        //     ver: "1.0",
+        // },
+
+        success: function (response) {
+          const coValueList = []; //일산화탄소 농도
+          const so2ValueList = []; //아황산가스
+          const o3ValueList = []; // 오존 농도
+          const no2ValueList = []; //이산화질소 농도
+          const labelList = [];
+
+          console.log(response);
+          console.log(response.response.body.items);
+
+          items = [...response.response.body.items];
+          $.each(items, function (idx, el) {
+            coValueList.push(el.coValue);
+            so2ValueList.push(el.so2Value);
+            o3ValueList.push(el.o3Value);
+            no2ValueList.push(el.no2Value);
+            labelList.push(el.stationName);
+          });
+          console.log(airArray);
+          myChart = new Chart(ctx, {
+            type: "bar",
+            data: {
+              labels: labelList,
+              datasets: [
+                {
+                  label: "일산화탄소",
+                  data: coValueList,
+                  borderWidth: 1,
+                },
+                {
+                  label: "아황산가스",
+                  data: so2ValueList,
+                  borderWidth: 1,
+                },
+                {
+                  label: "오존농도",
+                  data: o3ValueList,
+                  borderWidth: 1,
+                },
+                {
+                  label: "이산화탄소",
+                  data: no2ValueList,
+                  borderWidth: 1,
+                },
+              ],
+            },
+            options: {
+              plugins: {
+                title: {
+                  display: true,
+                  text: "대기",
+                },
+              },
+              scales: {
+                x: {
+                  stacked: true,
+                },
+                y: {
+                  stacked: true,
+                },
+              },
+            },
+          });
+        },
+      });
+    };
+
+    $(".btn-search").on("click", function () {
+      if (myChart !== null) {
+        myChart.destroy();
+      }
+
+      searchWord = $(".searchInput").val();
+
+      airCheck(searchWord);
+    });
+
+    $(".searchInput").on("keyup", function (e) {
+      if (myChart !== null) {
+        myChart.destroy();
+      }
+      if (e.keyCode === 13 || e.key === "Enter") {
+        searchWord = $(".searchInput").val();
+
+        airCheck(searchWord);
+      }
+    });
+  </script>
+</html>

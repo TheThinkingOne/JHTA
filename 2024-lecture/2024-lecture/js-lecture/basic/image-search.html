@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
+    <script src="
+    https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js
+    "></script>
+  </head>
+  <body>
+    <input type="text" class="search" />
+    <button class="btn-search">검색</button>
+    <ul class="imageUrlList"></ul>
+    <ul class="docUrlList"></ul>
+
+    <script>
+      // 빨래 설거지 밥먹기 => 동기적 순서 , 짜장면 배달요청, 설거지, 빨래 => 비동기적 순서
+      // fetch(
+      //   "https://dapi.kakao.com/v2/search/image?query=이터널 리턴 엠마",
+      //   {
+      //     headers: {
+      //       Authorization: "KakaoAK 26f8e770db88a00d0226478999c17ffb",
+      //     },
+      //   }
+      // )
+      //   .then(function (response) {
+      //     return response.json();
+      //   })
+      //   .then(function (data) {
+      //     console.log(data);
+      //   });
+      // console.log("내가먼저실행함 ㅋ");
+      // console.log("fetch 함수도 비동기 실행인 것을 알 수 있다");
+
+      const KaKaoSearch = function (searchWord) {
+        $.ajax({
+          url: "https://dapi.kakao.com/v2/search/image",
+          data: {
+            query: searchWord,
+            size: 10,
+          },
+          headers: {
+            Authorization: "KakaoAK 26f8e770db88a00d0226478999c17ffb",
+          },
+          success: function (response) {
+            //console.log(response.documents);
+            const urlImgDocs = [...response.documents];
+            const siteLinkDocs = [...response.documents];
+
+            //사이트 섬네일 불러오는부분
+            // let linkUrl = "";
+            // $.each(documents, function (idx, el) {
+            //   console.log(el.display_sitename);
+            //   linkUrl += `<li><img src=${el.display_sitename}></li>`;
+            //   // 카카오에서 thumbnail은 동영상 썸네일일고 thumbnail_url은 사이트의 썸네일인듯 하다
+            // });
+
+            let urlImg = "";
+            $.each(urlImgDocs, function (idx, el) {
+              urlImg += `<li><img src=${el.thumbnail_url}></li>`;
+            });
+
+            let docUrl = "";
+            $.each(siteLinkDocs, function (idx, el) {
+              docUrl += `<li><a href="${el.doc_url}">${el.doc_url}></a></li>`;
+            });
+
+            $(".docUrlList").html(docUrl); // ajax로 받아온 데이터 중 첫번쨰 반환
+            $(".imageUrlList").html(urlImg);
+          },
+        });
+      };
+
+      $(".btn-search").on("click", function () {
+        const search = $(".search").val();
+        KaKaoSearch(search);
+      });
+      //KaKaoSearch("이터널 리턴 엠마");
+    </script>
+  </body>
+</html>

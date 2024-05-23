@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>전기차충전소 위치표시</title>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"
+    />
+    <script
+      type="text/javascript"
+      src="//dapi.kakao.com/v2/maps/sdk.js?appkey=9174533b0b1a393c05c8bf8a53e131af&libraries=services,clusterer"
+    ></script>
+  </head>
+  <style>
+    .wrap {
+      position: absolute;
+      left: 0;
+      bottom: 40px;
+      width: 288px;
+      height: 132px;
+      margin-left: -144px;
+      text-align: left;
+      overflow: hidden;
+      font-size: 12px;
+      font-family: "Malgun Gothic", dotum, "돋움", sans-serif;
+      line-height: 1.5;
+    }
+    .wrap * {
+      padding: 0;
+      margin: 0;
+    }
+    .wrap .info {
+      width: 286px;
+      height: 120px;
+      border-radius: 5px;
+      border-bottom: 2px solid #ccc;
+      border-right: 1px solid #ccc;
+      overflow: hidden;
+      background: #fff;
+    }
+    .wrap .info:nth-child(1) {
+      border: 0;
+      box-shadow: 0px 1px 2px #888;
+    }
+    .info .title {
+      padding: 5px 0 0 10px;
+      height: 30px;
+      background: #eee;
+      border-bottom: 1px solid #ddd;
+      font-size: 18px;
+      font-weight: bold;
+    }
+    .info .close {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      color: #888;
+      width: 17px;
+      height: 17px;
+      background: url("https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/overlay_close.png");
+    }
+    .info .close:hover {
+      cursor: pointer;
+    }
+    .info .body {
+      position: relative;
+      overflow: hidden;
+    }
+    .info .desc {
+      position: relative;
+      margin: 13px 0 0 90px;
+      height: 75px;
+    }
+    .desc .ellipsis {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+    .desc .jibun {
+      font-size: 11px;
+      color: #888;
+      margin-top: -2px;
+    }
+    .info .img {
+      position: absolute;
+      top: 6px;
+      left: 5px;
+      width: 73px;
+      height: 71px;
+      border: 1px solid #ddd;
+      color: #888;
+      overflow: hidden;
+    }
+    .info:after {
+      content: "";
+      position: absolute;
+      margin-left: -12px;
+      left: 50%;
+      bottom: 0;
+      width: 22px;
+      height: 12px;
+      background: url("https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/vertex_white.png");
+    }
+    .info .link {
+      color: #5085bb;
+    }
+  </style>
+
+  <body>
+    <div id="map" style="width: 1200px; height: 600px"></div>
+
+    <script>
+      const container = document.querySelector("#map"); //지도를 담을 영역의 DOM 레퍼런스
+      const options = {
+        //지도를 생성할 때 필요한 기본 옵션
+        center: new kakao.maps.LatLng(36.2683, 127.6358), //지도의 중심좌표.
+        level: 12, //지도의 레벨(확대, 축소 정도)
+      };
+
+      const map = new kakao.maps.Map(container, options); //지도 생성 및 객체 리턴
+
+      const makeContent = function (title, addr, cpNm) {
+        return `
+      <div class="wrap">
+                <div class="info">
+                    <div class="title">
+                        ${title}
+                        <div class="close" onclick="closeOverlay()" title="닫기"></div>
+                    </div>'
+                    <div class="body">
+                        <div class="img">
+                            <img src="https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/thumnail.png" width="73" height="70">
+                       </div>
+                        <div class="desc">
+                            <div class="ellipsis">주소: ${addr}</div>
+                            <div class="jibun ellipsis">충전타입: ${cpNm}</div>
+                        </div>
+                    </div>
+                </div>
+            </div>`;
+      };
+      /*
+
+      const geocoder = new kakao.maps.services.Geocoder();
+
+      geocoder.addressSearch(
+        "서울시 송파구 문정로 83",
+        function (result, status) {
+          console.log(result);
+          // 정상적으로 검색이 완료됐으면
+          if (status === kakao.maps.services.Status.OK) {
+            const coords = new kakao.maps.LatLng(result[0].y, result[0].x);
+
+            // 결과값으로 받은 위치를 마커로 표시합니다
+            const marker = new kakao.maps.Marker({
+              map: map,
+              position: coords,
+            });
+
+            // 인포윈도우로 장소에 대한 설명을 표시합니다
+            const infowindow = new kakao.maps.InfoWindow({
+              content:
+                '<div style="width:150px;text-align:center;padding:6px 0;">집으로 가는 길을 찾는 중일 뿐</div>',
+            });
+            infowindow.open(map, marker);
+
+            // 지도의 중심을 결과값으로 받은 위치로 이동시킵니다
+            map.setCenter(coords);
+          }
+        }
+      );
+      */
+
+      // const content = `
+      // <div class="wrap">
+      //           <div class="info">
+      //               <div class="title">
+      //                   카카오 스페이스닷원
+      //                   <div class="close" onclick="closeOverlay()" title="닫기"></div>
+      //               </div>'
+      //               <div class="body">
+      //                   <div class="img">
+      //                       <img src="https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/thumnail.png" width="73" height="70">
+      //                  </div>
+      //                   <div class="desc">
+      //                       <div class="ellipsis">제주특별자치도 제주시 첨단로 242</div>
+      //                       <div class="jibun ellipsis">(우) 63309 (지번) 영평동 2181</div>
+      //                       <div><a href="https://www.kakaocorp.com/main" target="_blank" class="link">홈페이지</a></div>
+      //                   </div>
+      //               </div>
+      //           </div>
+      //       </div>`;
+
+      const content = makeContent(
+        "제주시민속오일시장 3주차장",
+        "제주시 도두일동 1212 도두일동 1212-1번지",
+        "급속04"
+      );
+
+      const overlay = new kakao.maps.CustomOverlay({
+        content: content,
+        map: map,
+        position: new kakao.maps.LatLng(36.2683, 127.6358),
+      });
+      overlay.setMap(null);
+
+      // 마커를 클릭했을 때 커스텀 오버레이를 표시합니다
+      // kakao.maps.event.addListener(marker, "click", function () {
+      //   overlay.setMap(map);
+      // });
+
+      // 커스텀 오버레이를 닫기 위해 호출되는 함수입니다
+      function closeOverlay() {
+        overlay.setMap(null);
+      }
+
+      // 마커가 표시될 위치입니다
+      const markerPosition = new kakao.maps.LatLng(33.450701, 126.570667);
+
+      // 마커를 생성합니다
+      const marker = new kakao.maps.Marker({
+        position: markerPosition,
+      });
+
+      // 마커가 지도 위에 표시되도록 설정합니다
+      marker.setMap(map);
+
+      // 마커 클러스터러를 생성합니다
+      const clusterer = new kakao.maps.MarkerClusterer({
+        map: map, // 마커들을 클러스터로 관리하고 표시할 지도 객체
+        averageCenter: true, // 클러스터에 포함된 마커들의 평균 위치를 클러스터 마커 위치로 설정
+        minLevel: 10, // 클러스터 할 최소 지도 레벨
+      });
+
+      $.ajax({
+        url: "https://api.odcloud.kr/api/EvInfoServiceV2/v1/getEvSearchList?page=1&perPage=5000&cond%5Baddr%3A%3ALIKE%5D=%EC%84%9C%EC%9A%B8&serviceKey=%2FiP5dxeDKBDeRjgvmY7hIzy1yeMzt8aJ1NWLvV1h7Lq6qGSNa%2Bg04nI1Dzv8jigeRNXH8gq54KviS%2BMNxj7Y3w%3D%3D",
+        // 위에꺼가 한국 전기차 정보 공식 api url 링크
+        // data: {
+        //   page: 1,
+        //   perPage: 50,
+        //   cond: {},
+        //   serviceKey:
+        //     "%2FiP5dxeDKBDeRjgvmY7hIzy1yeMzt8aJ1NWLvV1h7Lq6qGSNa%2Bg04nI1Dzv8jigeRNXH8gq54KviS%2BMNxj7Y3w%3D%3D",
+        // },
+        success: function (response) {
+          console.log(response);
+          const stationList = [...response.data];
+          const markers = [];
+          $.each(stationList, function (idx, el) {
+            // => 콜백함수
+            const marker = new kakao.maps.Marker({
+              map: map, // 마커를 표시할 지도
+              position: new kakao.maps.LatLng(el.lat, el.longi), // 마커를 표시할 위치
+              title: el.csNm, // 마커의 타이틀, 마커에 마우스를 올리면 타이틀이 표시됩니다
+              //image: markerImage, // 마커 이미지
+            });
+            markers.push(marker);
+            kakao.maps.event.addListener(marker, "click", function () {
+              overlay.setMap(map);
+              overlay.setPosition(marker.getPosition());
+              overlay.setContent(makeContent(el.csNm, el.addr, el.cpNm));
+            });
+          });
+          clusterer.addMarkers(markers);
+        },
+      });
+    </script>
+  </body>
+</html>

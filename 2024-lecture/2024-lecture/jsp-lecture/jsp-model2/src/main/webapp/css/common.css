@@ -1,0 +1,29 @@
+.error-404 {
+    background-image: url("../images/404NOTFOUND.png");
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+}
+.error-404 a {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.error-500 {
+    background-image: url("../images/500ERROR.png");
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+}
+.error-500 a {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.content {
+    /*줄바꿈 자동 인식*/
+    white-space: pre-line;
+
+}

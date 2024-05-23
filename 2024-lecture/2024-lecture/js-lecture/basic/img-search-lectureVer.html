@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"
+    />
+  </head>
+  <body>
+    <!-- c(post) read(get) -->
+    <form action="서버주소" method="post">
+      <input type="text" name="user-name" />
+      <button>전송</button>
+    </form>
+    <input type="text" class="search" />
+    <button class="btn-search">검색</button>
+    <ul class="list"></ul>
+    <script>
+      fetch("https://dapi.kakao.com/v2/search/image?query=전지현", {
+        headers: {
+          Authorization: "KakaoAK a4322cd945d88b2a3d29399c28fe740f",
+        },
+      });
+      // .then(function (response) {
+      //   return response.json();
+      // })
+      // .then(function (data) {
+      //   console.log(data);
+      // });
+
+      $.ajax({
+        url: "서버주소",
+        method: "patch",
+        headers: {
+          // key: value
+          // 서버에 데이터생성: post , 서버에서 데이터 받아오기: get
+        },
+        data: {
+          // query: searchWord
+        },
+        success: function (response) {
+          // 응답: response 요청: request
+          console.log(response);
+        },
+        error: function (response) {
+          console.log(response);
+        },
+      });
+
+      const kakaoSearch = function (searchWord) {
+        $.ajax({
+          url: "https://dapi.kakao.com/v2/search/vclip",
+          data: {
+            query: searchWord,
+          },
+          headers: {
+            Authorization: "KakaoAK 26f8e770db88a00d0226478999c17ffb",
+          },
+          success: function (response) {
+            console.log(response.documents);
+            const documents = [...response.documents];
+            let items = "";
+            $.each(documents, function (idx, el) {
+              items += `<li><a href=${el.url} data-fancybox="gallery"><img src=${el.thumbnail}></a></li>`;
+            });
+            $(".list").html(items);
+          },
+          error: function (err) {
+            console.log(err);
+            alert("검색 실패 병신아!");
+          },
+        });
+      };
+      $(".btn-search").on("click", function () {
+        const search = $(".search").val();
+        kakaoSearch(search);
+      });
+      $(".search").on("keyup", function (e) {
+        console.log(e);
+        if (e.keyCode === 13 || e.key === "Enter") {
+          const search = $(".search").val();
+          kakaoSearch(search);
+        }
+      });
+      //이벤트 위임
+
+      $(".list").on("click", "li", function () {
+        console.log("aa");
+      });
+
+      Fancybox.bind("[data-fancybox]", {
+        // Your custom options
+      });
+    </script>
+  </body>
+</html>

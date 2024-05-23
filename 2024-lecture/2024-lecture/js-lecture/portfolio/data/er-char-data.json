@@ -1,0 +1,368 @@
+{
+  "imageFolder": "images/erChars",
+  "subjects": [
+    {
+      "img": "nadine.png",
+      "name": "나딘",
+      "weaponType": ["bow", "crossbow", "ads"]
+    },
+    {
+      "img": "nathapon.png",
+      "name": "나타폰",
+      "weaponType": ["camera", "ads"]
+    },
+    {
+      "img": "nicky.png",
+      "name": "니키",
+      "weaponType": ["glove", "melee"]
+    },
+    {
+      "img": "daniel.png",
+      "name": "다니엘",
+      "weaponType": ["dagger", "melee"]
+    },
+    {
+      "img": "debimarlene.png",
+      "name": "데비&마를렌",
+      "weaponType": ["two-handed-sword", "melee"]
+    },
+    {
+      "img": "tia.png",
+      "name": "띠아",
+      "weaponType": ["bat", "melee"]
+    },
+    {
+      "img": "laure.png",
+      "name": "라우라",
+      "weaponType": ["whip", "melee"]
+    },
+    {
+      "img": "lenox.png",
+      "name": "레녹스",
+      "weaponType": ["whip", "melee"]
+    },
+    {
+      "img": "leni.png",
+      "name": "레니",
+      "weaponType": ["pistol", "ads"]
+    },
+    {
+      "img": "leon.png",
+      "name": "레온",
+      "weaponType": ["glove", "melee"]
+    },
+    {
+      "img": "rozzi.png",
+      "name": "로지",
+      "weaponType": ["pistol", "ads"]
+    },
+    {
+      "img": "luke.png",
+      "name": "루크",
+      "weaponType": ["bat", "melee"]
+    },
+    {
+      "img": "lidailin.png",
+      "name": "리 다이린",
+      "weaponType": ["glove", "nunchaku", "melee"]
+    },
+    {
+      "img": "rio.png",
+      "name": "리오",
+      "weaponType": ["bow", "ads"]
+    },
+    {
+      "img": "martina.png",
+      "name": "마르티나",
+      "weaponType": ["camera", "ads"]
+    },
+    {
+      "img": "mai.png",
+      "name": "마이",
+      "weaponType": ["whip", "melee"]
+    },
+    {
+      "img": "markus.png",
+      "name": "마커스",
+      "weaponType": ["axe", "hammer", "melee"]
+    },
+    {
+      "img": "magnus.png",
+      "name": "매그너스",
+      "weaponType": ["bat", "hammer", "melee"]
+    },
+    {
+      "img": "vanya.png",
+      "name": "바냐",
+      "weaponType": ["arcana", "ads"]
+    },
+    {
+      "img": "barbara.png",
+      "name": "바바라",
+      "weaponType": ["bat", "melee", "ads"]
+    },
+    {
+      "img": "bernice.png",
+      "name": "버니스",
+      "weaponType": ["sniper", "ads"]
+    },
+    {
+      "img": "bianca.png",
+      "name": "비앙카",
+      "weaponType": ["arcana", "ads"]
+    },
+    {
+      "img": "celine.png",
+      "name": "셀린",
+      "weaponType": ["throw", "ads"]
+    },
+    {
+      "img": "xiukai.png",
+      "name": "쇼우",
+      "weaponType": ["spear", "dagger", "melee"]
+    },
+    {
+      "img": "shoichi.png",
+      "name": "쇼이치",
+      "weaponType": ["dagger", "melee"]
+    },
+    {
+      "img": "sua.png",
+      "name": "수아",
+      "weaponType": ["bat", "hammer", "ads"]
+    },
+    {
+      "img": "sissela.png",
+      "name": "시셀라",
+      "weaponType": ["throw", "dart", "ads"]
+    },
+    {
+      "img": "silvia.png",
+      "name": "실비아",
+      "weaponType": ["pistol", "ads"]
+    },
+    {
+      "img": "adela.png",
+      "name": "아델라",
+      "weaponType": ["bat", "melee", "ads"]
+    },
+    {
+      "img": "adriana.png",
+      "name": "아드리아나",
+      "weaponType": ["throw", "ads"]
+    },
+    {
+      "img": "adina.png",
+      "name": "아디나 ",
+      "weaponType": ["arcana", "ads"]
+    },
+    {
+      "img": "arda.png",
+      "name": "아르다",
+      "weaponType": ["arcana", "ads"]
+    },
+    {
+      "img": "abigail.png",
+      "name": "아비게일",
+      "weaponType": ["scythe", "melee"]
+    },
+    {
+      "img": "aya.png",
+      "name": "아야",
+      "weaponType": ["pistol", "rifle", "sniper", "ads"]
+    },
+    {
+      "img": "isol.png",
+      "name": "아이솔",
+      "weaponType": ["pistol", "rifle", "ads"]
+    },
+    {
+      "img": "isaac.png",
+      "name": "아이작",
+      "weaponType": ["tonfa", "melee"]
+    },
+    {
+      "img": "alex.png",
+      "name": "알렉스",
+      "weaponType": [
+        "tonfa",
+        "two-handed-sword",
+        "dart",
+        "pistol",
+        "melee",
+        "ads"
+      ]
+    },
+    {
+      "img": "alonso.png",
+      "name": "알론소",
+      "weaponType": ["glove", "melee"]
+    },
+    {
+      "img": "jan.png",
+      "name": "얀",
+      "weaponType": ["glove", "tonfa", "melee"]
+    },
+    {
+      "img": "estelle.png",
+      "name": "에스텔",
+      "weaponType": ["axe", "melee"]
+    },
+    {
+      "img": "aiden.png",
+      "name": "에이든",
+      "weaponType": ["two-handed-sword", "melee"]
+    },
+    {
+      "img": "echion.png",
+      "name": "에키온",
+      "weaponType": ["vf-prosthetic-hand", "melee"]
+    },
+    {
+      "img": "elena.png",
+      "name": "엘레나",
+      "weaponType": ["rapier", "melee"]
+    },
+    {
+      "img": "emma.png",
+      "name": "엠마",
+      "weaponType": ["arcana", "dart", "ads"]
+    },
+    {
+      "img": "johann.png",
+      "name": "요한",
+      "weaponType": ["arcana", "ads"]
+    },
+    {
+      "img": "william.png",
+      "name": "윌리엄",
+      "weaponType": ["throw", "ads"]
+    },
+    {
+      "img": "yuki.png",
+      "name": "유키",
+      "weaponType": ["double-sword", "two-handed-sword", "melee"]
+    },
+    {
+      "img": "weirdCat.webp",
+      "name": "이렘",
+      "weaponType": ["throw", "melee", "ads"]
+    },
+    {
+      "img": "eva.png",
+      "name": "이바",
+      "weaponType": ["throw", "ads"]
+    },
+    {
+      "img": "lyanh.png",
+      "name": "이안",
+      "weaponType": ["dagger", "melee"]
+    },
+    {
+      "img": "eleven.png",
+      "name": "일레븐",
+      "weaponType": ["hammer", "melee"]
+    },
+    {
+      "img": "zahir.png",
+      "name": "자히르",
+      "weaponType": ["throw", "dart", "ads"]
+    },
+    {
+      "img": "jackie.png",
+      "name": "재키",
+      "weaponType": [
+        "dagger",
+        "two-handed-sword",
+        "axe",
+        "double-sword",
+        "melee"
+      ]
+    },
+    {
+      "img": "jenny.png",
+      "name": "제니",
+      "weaponType": ["pistol", "ads"]
+    },
+    {
+      "img": "tsubame.png",
+      "name": "츠바메",
+      "weaponType": ["dart", "ads"]
+    },
+    {
+      "img": "camilo.png",
+      "name": "카밀로",
+      "weaponType": ["rapier", "double-sword", "melee"]
+    },
+    {
+      "img": "karla.png",
+      "name": "칼라",
+      "weaponType": ["crossbow", "ads"]
+    },
+    {
+      "img": "cathy.png",
+      "name": "캐시",
+      "weaponType": ["dagger", "double-sword", "melee"]
+    },
+    {
+      "img": "chloe.png",
+      "name": "클로에",
+      "weaponType": ["dart", "ads"]
+    },
+    {
+      "img": "chiara.png",
+      "name": "키아라",
+      "weaponType": ["rapier", "melee"]
+    },
+    {
+      "img": "tazia.png",
+      "name": "타지아",
+      "weaponType": ["dart", "ads", "melee"]
+    },
+    {
+      "img": "theodore.png",
+      "name": "테오도르",
+      "weaponType": ["sniper", "ads"]
+    },
+    {
+      "img": "felix.png",
+      "name": "펠릭스",
+      "weaponType": ["spear", "melee"]
+    },
+    {
+      "img": "priya.png",
+      "name": "프리야",
+      "weaponType": ["guitar", "ads"]
+    },
+    {
+      "img": "fiora.png",
+      "name": "피오라",
+      "weaponType": ["spear", "rapier", "two-handed-sword", "melee"]
+    },
+    {
+      "img": "piolo.png",
+      "name": "피올로",
+      "weaponType": ["nunchaku", "melee"]
+    },
+    {
+      "img": "hart.png",
+      "name": "하트",
+      "weaponType": ["guitar", "ads"]
+    },
+    {
+      "img": "haze.png",
+      "name": "헤이즈",
+      "weaponType": ["rifle", "ads"]
+    },
+    {
+      "img": "hyunwoo.png",
+      "name": "현우",
+      "weaponType": ["glove", "tonfa", "melee"]
+    },
+    {
+      "img": "hyejin.png",
+      "name": "혜진",
+      "weaponType": ["dart", "bow", "ads"]
+    }
+  ]
+}

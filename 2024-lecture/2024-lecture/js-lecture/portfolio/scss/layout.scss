@@ -1,0 +1,10 @@
+@import "vars";
+@import "mixin";
+@import "common";
+@import "main";
+// @import "history";
+// @import "footer";
+
+// scss는 사용하기 편하지만 아직 browser는 css만 인식한다.
+// 컴파일 특정언어를 기기가 인식할 수 있도록 바꿔주는 일이 필요함
+// 언더바(_)를 붙인 것은 컴파일을 하지 않음

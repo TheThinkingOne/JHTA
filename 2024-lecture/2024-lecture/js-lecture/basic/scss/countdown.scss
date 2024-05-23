@@ -1,0 +1,65 @@
+@import "vars";
+@import "mixin";
+@import "common";
+
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Montserrat", sans-serif;
+  background-color: #333;
+  color: #fff;
+  background-image: url(../image/wallpaper-3584229_1280.jpg);
+  background-size: cover;
+  // cover 하면 화면을 무조건 맞게 채움
+  background-position: center;
+  .quote-box {
+    display: flex;
+    justify-content: center;
+    height: 50vh;
+  }
+}
+h1 {
+  position: absolute;
+  font-weight: 200;
+  font-size: 40px;
+  top: 150px;
+  text-align: center;
+  span {
+    font-weight: 400;
+  }
+}
+h2 {
+  position: absolute;
+  font-weight: 200;
+  top: 525px;
+  text-align: center;
+}
+
+.date-box {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  height: 100vh;
+  .txt-box {
+    width: 375px;
+    //border-left: 1px solid rgba(255, 255, 255, 0.2);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    // &:last-child {
+    //   border-right: 1px solid rgba(255, 255, 255, 0.2);
+    // }
+    p {
+      font-size: 5vw;
+      font-weight: 300;
+      margin-bottom: 10px;
+    }
+    span {
+      font-size: 25px;
+    }
+  }
+}

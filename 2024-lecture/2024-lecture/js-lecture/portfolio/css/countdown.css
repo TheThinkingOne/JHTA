@@ -1,0 +1,89 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+body {
+  font-family: "Montserrat";
+  font-size: 16px;
+  min-height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #333;
+}
+
+button {
+  background: none;
+  border: none;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Montserrat", sans-serif;
+  background-color: #333;
+  color: #fff;
+  background-image: url(../image/wallpaper-3584229_1280.jpg);
+  background-size: cover;
+  background-position: center;
+}
+body .quote-box {
+  display: flex;
+  justify-content: center;
+  height: 50vh;
+}
+
+h1 {
+  position: absolute;
+  font-weight: 200;
+  font-size: 40px;
+  top: 150px;
+  text-align: center;
+}
+h1 span {
+  font-weight: 400;
+}
+
+h2 {
+  position: absolute;
+  font-weight: 200;
+  top: 525px;
+  text-align: center;
+}
+
+.date-box {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  height: 100vh;
+}
+.date-box .txt-box {
+  width: 375px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.date-box .txt-box p {
+  font-size: 5vw;
+  font-weight: 300;
+  margin-bottom: 10px;
+}
+.date-box .txt-box span {
+  font-size: 25px;
+}/*# sourceMappingURL=countdown.css.map */

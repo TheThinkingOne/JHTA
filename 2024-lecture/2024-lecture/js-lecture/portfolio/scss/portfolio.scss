@@ -1,0 +1,73 @@
+@import "vars";
+@import "mixin";
+@import "common";
+body {
+  overflow: auto;
+  display: block;
+}
+header {
+  height: 80px;
+  overflow: hidden;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  h1 {
+    font-weight: 600;
+    text-transform: uppercase; // 소문자를 대문자로
+    font-size: 20px;
+  }
+}
+.filter-box {
+  display: flex;
+  justify-content: center;
+  margin: 100px 0;
+  button {
+    width: 120px;
+    height: 40px;
+    background-color: #111;
+    color: #fff;
+    border-radius: 100px;
+    margin: 0 10px; // 위아래 마진 0, 좌우 10px
+    transition: all 0.25s ease;
+    &.on {
+      background-color: #f00;
+    }
+  }
+}
+.list {
+  width: 1200px;
+  margin: 100px auto;
+  display: flex;
+  //gap: 10px;
+  li {
+    box-sizing: border-box;
+    width: calc(25% - 20px);
+    padding: 10px;
+    background-color: #fff;
+    margin: 10px;
+    img {
+      width: 100%;
+    }
+    h5 {
+      font-size: 20px;
+      margin: 10px 0;
+    }
+    a svg {
+      width: 20px;
+    }
+    .point {
+      color: #f00;
+      font-size: 24px;
+      font-weight: 700;
+    }
+    .more {
+      padding: 10px 15px;
+      background-color: #098be2;
+      color: #fff;
+      border-radius: 100px;
+      margin: 10px 0;
+      display: inline-block; // 넓이 높이 가지는 block 인데 글자처럼 취급함...
+    }
+  }
+}

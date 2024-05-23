@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>일간 박스오피스 관객수 조회</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
+    <style>
+      .chart-box {
+        width: 1800px;
+        height: 600px;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <input type="date" id="picked-date" />
+    </div>
+    <div class="chart-box">
+      <canvas id="myChart"> </canvas>
+    </div>
+    <script>
+      //const ctx = document.getElementById("myChart");
+      const str = "2024-03-14"; // split 안에 있는 것을 제거하고 배열로 반환
+      const ctx = $("#myChart").get();
+      //console.log(str.split("-").join("")); // join: 문자열을 다시 합쳐준다
+      $("#picked-date").on("change", function () {
+        //console.log($(this).val().split("-").join(""));
+        loadData($(this).val().split("-").join(""));
+      });
+      let myChart = null;
+      const loadData = function (date) {
+        const labelList = [];
+        const dataList = [];
+
+        $.ajax({
+          url: "http://kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/searchDailyBoxOfficeList.json",
+          data: {
+            key: "e3df43d1c6dfbbb5be1c568500f79211",
+            targetDt: date,
+          },
+          success: function (response) {
+            //console.log(response.boxOfficeResult.dailyBoxOfficeList);
+            const boxOffice = [...response.boxOfficeResult.dailyBoxOfficeList];
+            console.log(boxOffice);
+            $.each(boxOffice, function (idx, el) {
+              labelList.push(el.movieNm);
+              dataList.push(el.audiAcc);
+            });
+            if (myChart !== null) {
+              myChart.destroy();
+            }
+            // myChart.destroy();
+            myChart = new Chart(ctx, {
+              // css 로 넣는 스타일보다 js로 넣은 스타일이 우선권 가짐
+              type: "bar",
+              data: {
+                labels: labelList,
+                datasets: [
+                  {
+                    label: "# of Votes",
+                    data: dataList,
+                    borderWidth: 1,
+                    backgroundColor: [
+                      "#CB4335",
+                      "#1F618D",
+                      "#F1C40F",
+                      "#27AE60",
+                      "#884EA0",
+                      "#D35400",
+                    ],
+                  },
+                ],
+              },
+              options: {
+                scales: {
+                  y: {
+                    beginAtZero: true,
+                  },
+                },
+                plugins: {
+                  title: {
+                    display: true,
+                    text: "영화 누적 관객수",
+                  },
+                },
+              },
+            });
+          },
+        });
+      };
+      const addZero = function (num) {
+        return num < 10 ? "0" + num : num;
+      };
+      // const currentDate = new Date();
+      // const year = currentDate.getFullYear();
+      // const month = addZero(currentDate.getMonth() + 1);
+      // const date = addZero(currentDate.getDate() - 1);
+      const yesterdDay = dayjs().subtract(1, "day").format("YYYYMMDD");
+      loadData(yesterdDay);
+      $("#picked-date").val(dayjs().subtract(1, "day").format("YYYY-MM-DD"));
+      console.log(dayjs().subtract(1, "day").format("YYYYMMDD")); // 자동으로 3월1일 에서 하루 뺀 2월 28일 나오게 해줌 good
+    </script>
+    <!-- three js script -->
+  </body>
+</html>

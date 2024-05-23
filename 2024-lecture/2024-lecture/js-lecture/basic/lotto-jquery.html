@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/lotto.css" />
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
+    <script src="
+    https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js
+    "></script>
+
+    <!-- <script src="lotto.js" defer></script> -->
+  </head>
+  <body>
+    <div class="btns">
+      <button class="btn">1</button>
+      <button class="btn">2</button>
+      <button class="btn">3</button>
+      <button class="btn">4</button>
+      <button class="btn">5</button>
+    </div>
+    <div class="paper-wrap">
+      <div class="paper">
+        <ul class="list"></ul>
+      </div>
+    </div>
+
+    <div class="popup">
+      <div class="content">내용</div>
+      <div class="btn-box">
+        <button class="btn-close">닫기</button>
+      </div>
+    </div>
+    <!-- 로또 랜덤공 뽑기 script -->
+    <script>
+      const list = document.querySelectorAll(".btn");
+      // NodeList 는 배열이긴 한데 유사배열
+      // for, length 가능, push 불가능
+      // js의 this는 누가 호출하냐에 따라 달라짐
+      const jqueryList = $(".btn");
+      // for (let i = 0; i < 5; i++) {
+      //   list[i].addEventListener("click", (e) => {
+      //     //list[i].classList.add("on");
+      //     console.log(this);
+      //     e.currentTarget.add("buttonOn");
+      //   });
+      // }
+      // jqueryList.on("click", function () {
+      //   // function () 대신 e => 하면 작동 안함
+      //   console.log(this);
+      //   //this.classList.add("buttonOn");
+      //   $(this).addClass("buttonOn");
+      //   $(this).remove(); // => jQuery의 remove 라는 함수가 호출됨
+      //   // this.remove(); => js의 remove 라는 함수가 호출됨
+      // });
+
+      // jqueryList.on("click", (e) => {
+      //   $(e.currentTarget).addClass("buttonOn");
+      // });
+
+      jqueryList.on("click", function (e) {
+        $(this).siblings().removeClass("buttonOn");
+        $(this).addClass("buttonOn");
+      });
+
+      const aa = function () {
+        console.log(this);
+      };
+      aa();
+
+      const myObj = {
+        bb: aa,
+      };
+      // js의 this는 언제 호출되는 시점에 결정된다.
+      myObj.bb();
+      function cc() {
+        console.log("cc===", this);
+        function dd() {
+          console.log("dd===", this);
+        }
+        dd();
+      }
+      cc();
+
+      $(".popup .btn-close").on("click", function () {
+        $(".popup").hide();
+      });
+    </script>
+    <!-- script end -->
+  </body>
+</html>

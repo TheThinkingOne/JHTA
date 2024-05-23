@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+    <script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.min.js"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/portfolio.css" />
+  </head>
+  <body>
+    <header>
+      <h1>이터널 리턴 실험체 목록</h1>
+    </header>
+    <div class="filter-box">
+      <button data-filter="item">ALL</button>
+      <button data-filter="melee">근접</button>
+      <button data-filter="melee">원거리</button>
+      <button data-filter="dagger">단검</button>
+      <button data-filter="two-handed-sword">양손검</button>
+      <button data-filter="axe">도끼</button>
+      <button data-filter="double-sword">쌍검</button>
+      <button data-filter="pistol">권총</button>
+      <button data-filter="rifle">돌격 소총</button>
+      <button data-filter="sniper">저격총</button>
+      <button data-filter="glove">글러브</button>
+      <button data-filter="tonfa">톤파</button>
+      <button data-filter="hammer">망치</button>
+      <button data-filter="bat">방망이</button>
+      <button data-filter="rapier">레이피어</button>
+      <button data-filter="spear">창</button>
+      <button data-filter="axe">활</button>
+      <button data-filter="crossbow">석궁</button>
+      <button data-filter="throw">투척</button>
+      <button data-filter="dart">암기</button>
+      <button data-filter="guitar">기타</button>
+      <button data-filter="nunchaku">쌍절곤</button>
+      <button data-filter="whip">채찍</button>
+      <button data-filter="camera">카메라</button>
+      <button data-filter="arcana">아르카나</button>
+      <button data-filter="vf-prosthetic-hand">VF 의수</button>
+    </div>
+    <div class="list-box">
+      <ul class="list"></ul>
+    </div>
+    <script>
+      let grid = null;
+
+      $.ajax({
+        url: "../data/er-char-data.json",
+        success: function (response) {
+          // parsing: 외부 문서를 내가 들고와서 화면에 출력하는 방법
+          const { subjects, imageFolder } = response;
+          let tempHtml = "";
+          $.each(subjects, function (idx, el) {
+            const { img, name, weaponType } = el;
+            //console.log(idx, "===", el);
+            tempHtml += `<li class="item ${weaponType.join(" ")}">
+              
+              <div class="">
+                  <a href="">
+                      <img class="" src="../images/erChars/${img}" alt="" />
+                  </a>
+                  <div class="">
+                      <a href="">
+                          <h5 class="">${name}</h5>
+                      </a>
+                  </div>
+              </div>
+
+            </li>`;
+          });
+          $(".list").html(tempHtml);
+
+          $(".list")
+            .imagesLoaded()
+            .always(function (instance) {
+              console.log("all images loaded");
+              grid = $(".list").isotope({
+                getSortData: {
+                  name: ".name",
+                },
+                // options
+                itemSelector: ".item",
+                layoutMode: "masonry",
+              });
+            })
+            .done(function (instance) {
+              console.log("all images successfully loaded");
+            })
+            .fail(function () {
+              console.log("all images loaded, at least one is broken");
+            })
+            .progress(function (instance, image) {
+              var result = image.isLoaded ? "loaded" : "broken";
+              console.log("image is " + result + " for " + image.img.src);
+            });
+        },
+      });
+
+      const filterArray = [
+        "",
+        "melee",
+        "ads",
+        "dagger",
+        "two-handed-sword",
+        "axe",
+        "double-sword",
+        "pistol",
+        "rifle",
+        "sniper",
+        "glove",
+        "tonfa",
+        "hammer",
+        "bat",
+        "rapier",
+        "spear",
+        "bow",
+        "crossbow",
+        "throw",
+        "dart",
+        "guitar",
+        "nunchaku",
+        "whip",
+        "camera",
+        "arcana",
+        "vf-prosthetic-hand",
+      ];
+
+      // $(document).ready(function () {
+      //   const filterButtonContainer = $(".filter-box");
+      //   filterArray.forEach((filter) => {
+      //     const buttonText = filter.replace(/-/g, " "); // 하이픈을 공백으로 대체하여 버튼 텍스트로 사용
+      //     const button = `<button data-filter="${filter}">${buttonText}</button>`;
+      //     filterButtonContainer.append(button);
+      //   });
+      // });
+
+      $(".filter-box button").on("click", function () {
+        console.log($(this).data());
+        const filterItem = `.${$(this).data("filter")}`;
+        grid.isotope({ filter: filterItem, sortBy: "name" });
+        $(this).addClass("on").siblings().removeClass("on");
+      });
+    </script>
+  </body>
+</html>

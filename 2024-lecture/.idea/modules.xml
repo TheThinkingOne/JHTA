@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/2024-lecture.iml" filepath="$PROJECT_DIR$/.idea/2024-lecture.iml" />
+      <module fileurl="file://$PROJECT_DIR$/2024-lecture/java-lecture/Array/Array.iml" filepath="$PROJECT_DIR$/2024-lecture/java-lecture/Array/Array.iml" />
+      <module fileurl="file://$PROJECT_DIR$/2024-lecture/java-lecture/Hello/Hello.iml" filepath="$PROJECT_DIR$/2024-lecture/java-lecture/Hello/Hello.iml" />
+      <module fileurl="file://$PROJECT_DIR$/2024-lecture/java-lecture/Practice05/Practice05.iml" filepath="$PROJECT_DIR$/2024-lecture/java-lecture/Practice05/Practice05.iml" />
+      <module fileurl="file://$PROJECT_DIR$/2024-lecture/java-lecture/boj/boj.iml" filepath="$PROJECT_DIR$/2024-lecture/java-lecture/boj/boj.iml" />
+      <module fileurl="file://$PROJECT_DIR$/2024-lecture/java-lecture/class/class.iml" filepath="$PROJECT_DIR$/2024-lecture/java-lecture/class/class.iml" />
+      <module fileurl="file://$PROJECT_DIR$/2024-lecture/java-lecture/extend/extend.iml" filepath="$PROJECT_DIR$/2024-lecture/java-lecture/extend/extend.iml" />
+      <module fileurl="file://$PROJECT_DIR$/2024-lecture/java-lecture/for/for.iml" filepath="$PROJECT_DIR$/2024-lecture/java-lecture/for/for.iml" />
+      <module fileurl="file://$PROJECT_DIR$/2024-lecture/java-lecture/interface_lecture/interface_lecture.iml" filepath="$PROJECT_DIR$/2024-lecture/java-lecture/interface_lecture/interface_lecture.iml" />
+      <module fileurl="file://$PROJECT_DIR$/2024-lecture/java-lecture/lecture03/lecture03.iml" filepath="$PROJECT_DIR$/2024-lecture/java-lecture/lecture03/lecture03.iml" />
+      <module fileurl="file://$PROJECT_DIR$/2024-lecture/java-lecture/practice01/practice01.iml" filepath="$PROJECT_DIR$/2024-lecture/java-lecture/practice01/practice01.iml" />
+      <module fileurl="file://$PROJECT_DIR$/2024-lecture/java-lecture/practice02/practice02.iml" filepath="$PROJECT_DIR$/2024-lecture/java-lecture/practice02/practice02.iml" />
+      <module fileurl="file://$PROJECT_DIR$/2024-lecture/java-lecture/practice03/practice03.iml" filepath="$PROJECT_DIR$/2024-lecture/java-lecture/practice03/practice03.iml" />
+      <module fileurl="file://$PROJECT_DIR$/2024-lecture/java-lecture/practice04/practice04.iml" filepath="$PROJECT_DIR$/2024-lecture/java-lecture/practice04/practice04.iml" />
+    </modules>
+  </component>
+</project>

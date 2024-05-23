@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/lotto.css" />
+    <title>Document</title>
+    <!-- <script src="lotto.js" defer></script> -->
+  </head>
+  <body>
+    <div class="btns">
+      <button class="btn">1</button>
+      <button class="btn">2</button>
+      <button class="btn">3</button>
+      <button class="btn">4</button>
+      <button class="btn">5</button>
+    </div>
+    <div class="paper-wrap">
+      <div class="paper">
+        <ul class="list"></ul>
+      </div>
+    </div>
+    <!-- 로또 랜덤공 뽑기 script -->
+    <script>
+      const makeLotto = function () {
+        const nums = [];
+        const selectedNums = [];
+        for (let i = 0; i < 45; i++) {
+          //num[i] = i + 1;
+          nums.push(i + 1);
+        }
+
+        for (let i = 0; i < 6; i++) {
+          selectedNums.push(
+            nums.splice(Math.floor(Math.random() * nums.length), 1).pop()
+          );
+        }
+
+        // console.log(selectedNums);
+        // js의 sort는 문자 정렬이다.
+        // console.log([1, 21, 3, 4, 5].sort());
+        // 이렇게 콜백 함수 선언 안해주면 숫자가 크기순으로 정렬이 제대로 안됨
+        selectedNums.sort((a, b) => a - b);
+
+        // paper.classList.remove("on");
+        //list.innerHTML = "";
+        for (let i = 0; i < 6; i++) {
+          const ball = selectedNums[i];
+          let color;
+          // 번호에 따라 li에 있는 클래스별로 공 색상을 다르게 설정해보기
+          if (1 <= selectedNums[i] && selectedNums[i] <= 10) {
+            list.innerHTML += `<li class="orange">${selectedNums[i]}</li>`;
+          } else if (11 <= selectedNums[i] && selectedNums[i] <= 20) {
+            list.innerHTML += `<li class="blue">${selectedNums[i]}</li>`;
+          } else if (21 <= selectedNums[i] && selectedNums[i] <= 30) {
+            list.innerHTML += `<li class="red">${selectedNums[i]}</li>`;
+          } else if (31 <= selectedNums[i] && selectedNums[i] <= 40) {
+            list.innerHTML += `<li class="gray">${selectedNums[i]}</li>`;
+          } else if (41 <= selectedNums[i] && selectedNums[i] <= 50) {
+            list.innerHTML += `<li class="green">${selectedNums[i]}</li>`;
+          }
+          //list.innerHTML += `<li class="orange">${selectedNums[i]}</li>`;
+        }
+      };
+
+      const paper = document.querySelector(".paper");
+      const games = document.querySelectorAll(".btn");
+      const list = document.querySelector(".list");
+      for (let i = 0; i < 5; i++) {
+        games[i].addEventListener("click", function () {
+          // 기능 제거 후 다시 걸기
+          paper.classList.remove("on");
+          for (let k = 0; k < 5; k++) {
+            games[k].classList.remove("buttonOn");
+            //버튼 5개 전체의 이벤트 제거
+          }
+          //paper.classList.remove("on");
+          setTimeout(function () {
+            paper.classList.add("on");
+            games[i].classList.add("buttonOn"); // 누른 버튼만 색 들어오게 설정
+          }, 100); // setTimeout 은 한번만 실행함
+
+          // btnOn.classList.remove("on");
+          // setTimeout(function () {
+          //   btnOn.classList.add("on");
+          // }, 100);
+
+          list.innerHTML = "";
+          for (let j = 0; j < i + 1; j++) {
+            makeLotto();
+          }
+        });
+        // btnOn[i].addEventListener("click", function() {
+        // })
+      }
+
+      // 백틱(`) 안에 넣고 ${내용물} 쓰면 괄호 안의 것을 변수로 인식함
+      // innerHTML을 사용하면 html 태그를 인식해서 웹 페이지 상에서 보여주지 않음
+    </script>
+    <!-- script end -->
+  </body>
+</html>

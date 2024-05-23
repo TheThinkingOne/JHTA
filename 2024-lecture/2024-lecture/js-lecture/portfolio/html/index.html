@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+    <script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.min.js"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/portfolio.css" />
+
+    <!-- cdn 이용하면 따로 js 폴더 필요없음 -->
+  </head>
+  <body>
+    <header>
+      <h1>portfolio</h1>
+    </header>
+    <div class="filter-box">
+      <button data-filter="item">ALL</button>
+      <button data-filter="typo">TYPO</button>
+      <button data-filter="paint">PAINT</button>
+      <button data-filter="sketch">SKETCH</button>
+      <button data-filter="photo">PHOTO</button>
+    </div>
+    <div class="list-box">
+      <ul class="list">
+        <!-- <li>
+          <a href="">
+            <div class="img"><img src="" alt="" />s</div>
+            <div class="content">
+              <h2>제목 들어가는곳</h2>
+              <p>내용 들어가는곳</p>
+              <p>3.9</p>
+            </div>
+          </a>
+        </li> -->
+      </ul>
+    </div>
+    <script>
+      let grid = null;
+
+      $.ajax({
+        url: "../data/data.json",
+        success: function (response) {
+          // parsing: 외부 문서를 내가 들고와서 화면에 출력하는 방법
+          const { typoList, imageFolder } = response;
+          let tempHtml = "";
+          $.each(typoList, function (idx, el) {
+            const { title, img, desc, point, category, link } = el;
+            //console.log(idx, "===", el);
+            tempHtml += `<li class="item ${category.join(" ")}">
+              
+              <div class="">
+                  <a href="${link}">
+                      <img class="" src="../images/${img}" alt="" />
+                  </a>
+                  <div class="">
+                      <a href="${link}">
+                          <h5 class="">${title}</h5>
+                      </a>
+                      <p class="">${desc}</p>
+                      <p class="point">${point}</p>
+                      <a href="${link}" class="more">
+                          Read more
+                      </a>
+                  </div>
+              </div>
+
+            </li>`;
+          });
+          $(".list").html(tempHtml);
+
+          $(".list")
+            .imagesLoaded()
+            .always(function (instance) {
+              console.log("all images loaded");
+              grid = $(".list").isotope({
+                getSortData: {
+                  title: ".title",
+                  point: ".point",
+                },
+                // options
+                itemSelector: ".item",
+                layoutMode: "masonry",
+              });
+            })
+            .done(function (instance) {
+              console.log("all images successfully loaded");
+            })
+            .fail(function () {
+              console.log("all images loaded, at least one is broken");
+            })
+            .progress(function (instance, image) {
+              var result = image.isLoaded ? "loaded" : "broken";
+              console.log("image is " + result + " for " + image.img.src);
+            });
+        },
+      });
+
+      const filterArray = ["", "typo", "paint", "sketch", "photo"];
+      // $(".filter-box button").on("click", function () {
+      //   console.log($(this).index());
+      //   const filterItem = `.${filterArray[$(this).index()]}`;
+      //   grid.isotope({ filter: filterItem });
+      // });
+
+      // $(".filter-box button").on("click", function () {
+      //   const filterItem = $(this).text().toLowerCase();
+      //   grid.isotope({ filter: filterItem });
+      // });
+
+      $(".filter-box button").on("click", function () {
+        console.log($(this).data());
+        const filterItem = `.${$(this).data("filter")}`;
+        grid.isotope({ filter: filterItem, sortBy: "p" });
+        $(this).addClass("on").siblings().removeClass("on");
+      });
+
+      // $(".filter-box button:nth-child(2)").on("click", function () {
+      //   console.log("버튼 2 클릭됨");
+      //   const filterItem = ".typo";
+      //   grid.isotope({ filter: filterItem });
+      // });
+      // $(".filter-box button:nth-child(3)").on("click", function () {
+      //   console.log("버튼 3 클릭됨");
+      //   const filterItem = ".paint";
+      //   grid.isotope({ filter: filterItem });
+      // });
+    </script>
+  </body>
+</html>

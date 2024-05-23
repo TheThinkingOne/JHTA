@@ -1,0 +1,118 @@
+@import "vars";
+@import "mixin";
+@import "common";
+
+body {
+  font-family: "Montserrat", sans-serif;
+  display: block;
+  font-size: 40px;
+}
+.btns {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  .btn {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100px;
+    color: #fff;
+    background-color: #555;
+    font-family: "Montserrat", sans-serif;
+    margin: 30px;
+    &.buttonOn {
+      background-color: #f00;
+      transition: all 1s ease;
+      //transform: translateY(0);
+    }
+  }
+}
+.paper {
+  min-height: 550px;
+  background-color: #fff;
+  transform: translateY(-110%);
+  &.on {
+    transition: all 1s ease;
+    transform: translateY(0);
+  }
+}
+.paper-wrap {
+  //width: 700px;
+  //margin: auto;
+  min-height: 550px;
+  overflow: hidden;
+  width: 700px;
+  margin: auto;
+  min-height: 550px;
+  background-color: #f00;
+}
+
+.list {
+  gap: 5px;
+  width: 700px;
+  //min-height: 650px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  padding: 15px;
+  $orange: rgb(251, 196, 0);
+  $blue: rgb(105, 200, 242);
+  $red: rgb(255, 114, 114);
+  $gray: rgb(170, 170, 170);
+  $green: rgb(176, 216, 64);
+  li {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f00;
+    color: #fff;
+    border-radius: 100px;
+    overflow: hidden;
+    &.orange {
+      background-color: $orange;
+      @include longShadow(50, darken($orange, 10));
+    }
+    &.blue {
+      background-color: $blue;
+      @include longShadow(50, darken($blue, 10));
+    }
+    &.red {
+      background-color: $red;
+      @include longShadow(50, darken($red, 10));
+    }
+    &.gray {
+      background-color: $gray;
+      @include longShadow(50, darken($gray, 10));
+    }
+    &.green {
+      background-color: $green;
+      @include longShadow(50, darken($green, 10));
+    }
+  }
+}
+
+.popup {
+  background-color: #fff;
+  padding: 20px;
+  position: absolute;
+  top: 100px;
+  left: 100px;
+  .content {
+    width: 400px;
+    min-height: 300px;
+    background-color: #111;
+  }
+  .btn-close {
+    padding: 10px 15px;
+    background-color: #111;
+    color: #fff;
+    border-radius: 5px;
+    margin-top: 10px;
+  }
+}

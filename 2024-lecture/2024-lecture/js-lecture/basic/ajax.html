@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"
+    />
+  </head>
+  <body>
+    <form action="서버주소" method="post">
+      <input type="text" name="user-id" />
+      <button>전송</button>
+    </form>
+    <input type="text" class="user-id" />
+    <button>전송</button>
+    <script>
+      $.ajax({
+        url: "서버주소",
+        method: "post",
+        data: {
+          userID: "kiyelee",
+          password: "1234",
+        },
+        success: function (response) {
+          console.log("성공했다!!!");
+        },
+      });
+    </script>
+  </body>
+</html>
