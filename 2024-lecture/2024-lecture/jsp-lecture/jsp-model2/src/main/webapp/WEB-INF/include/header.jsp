@@ -1,9 +1,10 @@
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"  %>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt"  prefix="f" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt"  prefix="fmt" %>
 <!DOCTYPE html>
 <html>
 <head>
+
     <title>JSP - Hello World</title>
     <link href="../css/bootstrap.min.css" rel="stylesheet">
     <link href="../css/common.css" rel="stylesheet">
@@ -11,6 +12,8 @@
     <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
     <script src="../js/bootstrap.bundle.min.js"></script>
     <script src="../js/jquery-3.7.1.min.js"></script>
+
+
 </head>
 <body>
 <div class="container">
@@ -25,7 +28,7 @@
         <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
             <li><a href="../index/index" class="nav-link px-2 link-secondary">Home</a></li>
             <li><a href="../member/list" class="nav-link px-2">List</a></li>
-            <li><a href="" class="nav-link px-2">Board</a></li>
+            <li><a href="../board/list" class="nav-link px-2">Board</a></li>
             <li><a href="" class="nav-link px-2">FAQs</a></li>
         </ul>
         <c:choose>

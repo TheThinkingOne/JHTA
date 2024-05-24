@@ -23,4 +23,5 @@ public class MemberDto {
     private String grade;
     private String originalProfile;
     private String renameProfile;
+    // 예를들어 다른 사람이 같은 이지미 파일 업로드시에 오류 방지 위함(renameProfile)
 }

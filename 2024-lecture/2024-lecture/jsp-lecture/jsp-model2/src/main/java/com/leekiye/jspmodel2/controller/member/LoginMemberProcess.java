@@ -19,11 +19,12 @@ public class LoginMemberProcess extends HelloServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String userID = req.getParameter("userID");
-        String userPw = req.getParameter("userPW");
+        String userPW = req.getParameter("userPW");
         String saveID = req.getParameter("saveID");
 
         MemberDao loginMemberDao = new MemberDao();
-        MemberDto loginMemberDto = loginMemberDao.loginMember(userID, userPw);
+        MemberDto loginMemberDto = loginMemberDao.loginMember(userID, userPW);
+
         if (loginMemberDto != null) {
             HttpSession session = req.getSession();
             session.setAttribute("sessionMemberDto", loginMemberDto);

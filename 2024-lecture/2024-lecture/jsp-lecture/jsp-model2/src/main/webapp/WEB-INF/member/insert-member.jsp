@@ -61,7 +61,7 @@
                    name="profile" accept="image/gif,image/jpg,image/png">
         </div>
         <div class="mb-3">
-            <div id="preview">미리보기 이미지 들어가는 곳</div>
+            <div id="preview">이미지 미리 보기</div>
         </div>
 
         <div>
