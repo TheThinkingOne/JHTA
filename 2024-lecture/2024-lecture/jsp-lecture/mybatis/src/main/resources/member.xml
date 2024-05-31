@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.leekiye.mybatis">
+    <insert id="insertMember" parameterType="MemberDto">
+        INSERT INTO MEMBER VALUES(
+            MEMBER_SEQ.NEXTVAL,
+            #{userID},
+            #{userPW},
+            #{userName},
+            #{userEmail},
+            #{postCode},
+            #{address},
+            #{addressDetail},
+            #{grade},
+            SYSDATE,
+            #{originalProfile},
+            #{renameProfile}
+        )
+    </insert>
+
+    <select id="idCheck" resultType="int" parameterType="String">
+        <!--SELECT COUNT(USERID) FROM MEMBER
+        WHERE USERID = #{userID}-->
+        SELECT COUNT(*) AS TOTAL FROM MEMBER
+        <!--WHERE USERID = #{userID}-->
+        WHERE USERID = #{value}
+    </select>
+
+    <select id="loginMember" resultType="MemberDto">
+        SELECT * FROM MEMBER
+        WHERE USERID = #{userID}
+    </select>
+
+    <select id="infoMember" resultType="MemberDto">
+        SELECT * FROM MEMBER
+        WHERE USERID = #{userID}
+    </select>
+
+</mapper>
