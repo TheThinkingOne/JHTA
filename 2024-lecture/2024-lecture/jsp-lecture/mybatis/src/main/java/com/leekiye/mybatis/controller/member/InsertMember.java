@@ -2,6 +2,7 @@ package com.leekiye.mybatis.controller.member;
 
 import com.leekiye.mybatis.dao.MemberDao;
 //import com.leekiye.mybatis.dto.Grade;
+import com.leekiye.mybatis.dto.Grade;
 import com.leekiye.mybatis.dto.MemberDto;
 import com.leekiye.mybatis.utils.ScriptWriter;
 import jakarta.servlet.ServletException;
@@ -80,7 +81,7 @@ public class InsertMember extends HttpServlet {
                         .address(req.getParameter("address"))
                         .addressDetail(req.getParameter("addressDetail"))
                         .birth(req.getParameter("birth"))
-                        .grade("member")
+                        .grade(Grade.MEMBER)
                         .originalProfile(fileName)
                         .renameProfile(renameProfile)
                         .build();

@@ -14,8 +14,15 @@
     <tr>
       <th>PROFILE</th>
       <td>
-        <img src="${request.contextPath}/upload/${profile}"
-             class="profile">
+        <c:choose>
+          <c:when test="${not empty infoMemberDto.renameProfile}">
+            <img src="${request.contextPath}/upload/${infoMemberDto.renameProfile}" class="profile">
+          </c:when>
+          <c:otherwise>
+            <img src="../images/defaultusericon.png" class="profile">
+          </c:otherwise>
+        </c:choose>
+
         <!-- 이미지 작게 만들기 -->
       </td>
     </tr>
@@ -29,11 +36,11 @@
     </tr>
     <tr>
       <th scope="row">EMAIL</th>
-      <td>${infoMemberDto.userEmail}></td>
+      <td>${infoMemberDto.userEmail}</td>
     </tr>
     <tr>
       <th scope="row">POSTCODE</th>
-      <td>${infoMemberDto.postCode}></td>
+      <td>${infoMemberDto.postCode}</td>
     </tr>
     <tr>
       <th>ADDRESS</th>
@@ -41,7 +48,7 @@
     </tr>
     <tr>
       <th scope="row">BIRTH</th>
-      <td>${infoMemberDto.birth}></td>
+      <td>${infoMemberDto.birth}</td>
     </tr>
     </tbody>
   </table>

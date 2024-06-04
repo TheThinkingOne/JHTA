@@ -18,12 +18,12 @@ public class MemberDto {
     private int postCode;
     private String address;
     private String addressDetail;
-    private String grade;
+    private Grade grade;
     private String birth;
     private String originalProfile;
     private String renameProfile;
 }
 
-enum Grade {
-    MEMBER, MANAGER, ADMIN
-}
+//enum Grade {
+//    MEMBER, MANAGER, ADMIN
+//}

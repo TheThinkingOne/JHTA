@@ -32,6 +32,7 @@
             <li><a href="../board/list?page=1" class="nav-link px-2">Board</a></li>
             <li><a href="" class="nav-link px-2">FAQs</a></li>
         </ul>
+
         <c:choose>
             <c:when test="${sessionID eq null}">
                 <div class="col-md-3 text-end">
@@ -42,13 +43,23 @@
             <c:otherwise>
                 <div class="col-md-3 text-end d-flex align-items-center">
                     <div class="d-inline-block">
-                        <a href="../member/info?userID=${sessionID}" class="d-block">
-                            <img src="${request.contextPath}/upload/${profile}" class="profile">
-                        </a>
+                        <c:choose>
+                            <c:when test="${not empty profile}">
+                                <a href="../member/info?userID=${sessionID}" class="d-block">
+                                    <img src="${request.contextPath}/upload/${profile}" class="profile">
+                                </a>
+                            </c:when>
+                            <c:otherwise>
+                                <a href="../member/info?userID=${sessionID}" class="d-block">
+                                    <img src="../images/defaultusericon.png" class="profile">
+                                </a>
+                            </c:otherwise>
+                        </c:choose>
                     </div>
                     <a href="../member/logout" class="btn btn-primary mx-2">LOGOUT</a>
                 </div>
             </c:otherwise>
         </c:choose>
+
     </header>
 </div>

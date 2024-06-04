@@ -10,247 +10,57 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5d3a7107-d8f4-4bcb-aadd-48c9f0cee56f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../../java-lecture/boj/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../jsp-model2-replyboard/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../jsp-model2-replyboard/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../jsp-model2-replyboard/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../jsp-model2-replyboard/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../jsp-model2-replyboard/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../jsp-model2-replyboard/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../jsp-model2-replyboard/src/main/java/com/leekiye/jspmodel2replyboard/connect/JDBCConnectionPool.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../jsp-model2-replyboard/src/main/java/com/leekiye/jspmodel2replyboard/controller/DeleteBoard.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../jsp-model2-replyboard/src/main/java/com/leekiye/jspmodel2replyboard/controller/ListBoard.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../jsp-model2-replyboard/src/main/java/com/leekiye/jspmodel2replyboard/controller/ReplyBoard.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../jsp-model2-replyboard/src/main/java/com/leekiye/jspmodel2replyboard/controller/SearchBoard.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../jsp-model2-replyboard/src/main/java/com/leekiye/jspmodel2replyboard/controller/ViewBoard.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../jsp-model2-replyboard/src/main/java/com/leekiye/jspmodel2replyboard/controller/WriteBoard.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../jsp-model2-replyboard/src/main/java/com/leekiye/jspmodel2replyboard/dao/BoardDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../jsp-model2-replyboard/src/main/java/com/leekiye/jspmodel2replyboard/dto/BoardDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../jsp-model2-replyboard/src/main/java/com/leekiye/jspmodel2replyboard/utils/CookieManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../jsp-model2-replyboard/src/main/java/com/leekiye/jspmodel2replyboard/utils/ScriptWriter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../jsp-model2-replyboard/src/main/webapp/WEB-INF/board/delete.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../jsp-model2-replyboard/src/main/webapp/WEB-INF/board/list.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../jsp-model2-replyboard/src/main/webapp/WEB-INF/board/reply.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../jsp-model2-replyboard/src/main/webapp/WEB-INF/board/searchlist.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../jsp-model2-replyboard/src/main/webapp/WEB-INF/board/view.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../jsp-model2-replyboard/src/main/webapp/WEB-INF/board/write.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../jsp-model2-replyboard/src/main/webapp/WEB-INF/include/footer.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../jsp-model2-replyboard/src/main/webapp/WEB-INF/include/header.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../jsp-model2-replyboard/src/main/webapp/css/bootstrap.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../jsp-model2-replyboard/src/main/webapp/css/common.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../jsp-model2-replyboard/src/main/webapp/css/sign-in.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../jsp-model2-replyboard/src/main/webapp/images/404NOTFOUND.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../jsp-model2-replyboard/src/main/webapp/images/500ERROR.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../jsp-model2-replyboard/src/main/webapp/images/AREYOUSURE.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../jsp-model2-replyboard/src/main/webapp/images/lenu.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../jsp-model2-replyboard/src/main/webapp/js/bootstrap.bundle.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../jsp-model2-replyboard/src/main/webapp/js/ckeditor.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../jsp-model2-replyboard/src/main/webapp/js/jquery-3.7.1.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../jsp-model2-replyboard/src/main/webapp/js/translations/af.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../jsp-model2-replyboard/src/main/webapp/js/translations/ar.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../jsp-model2-replyboard/src/main/webapp/js/translations/ast.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../jsp-model2-replyboard/src/main/webapp/js/translations/az.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../jsp-model2-replyboard/src/main/webapp/js/translations/bg.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../jsp-model2-replyboard/src/main/webapp/js/translations/bn.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../jsp-model2-replyboard/src/main/webapp/js/translations/bs.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../jsp-model2-replyboard/src/main/webapp/js/translations/ca.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../jsp-model2-replyboard/src/main/webapp/js/translations/cs.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../jsp-model2-replyboard/src/main/webapp/js/translations/da.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../jsp-model2-replyboard/src/main/webapp/js/translations/de-ch.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../jsp-model2-replyboard/src/main/webapp/js/translations/de.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../jsp-model2-replyboard/src/main/webapp/js/translations/el.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../jsp-model2-replyboard/src/main/webapp/js/translations/en-au.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../jsp-model2-replyboard/src/main/webapp/js/translations/en-gb.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../jsp-model2-replyboard/src/main/webapp/js/translations/eo.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../jsp-model2-replyboard/src/main/webapp/js/translations/es-co.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../jsp-model2-replyboard/src/main/webapp/js/translations/es.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../jsp-model2-replyboard/src/main/webapp/js/translations/et.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../jsp-model2-replyboard/src/main/webapp/js/translations/eu.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../jsp-model2-replyboard/src/main/webapp/js/translations/fa.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../jsp-model2-replyboard/src/main/webapp/js/translations/fi.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../jsp-model2-replyboard/src/main/webapp/js/translations/fr.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../jsp-model2-replyboard/src/main/webapp/js/translations/gl.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../jsp-model2-replyboard/src/main/webapp/js/translations/gu.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../jsp-model2-replyboard/src/main/webapp/js/translations/he.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../jsp-model2-replyboard/src/main/webapp/js/translations/hi.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../jsp-model2-replyboard/src/main/webapp/js/translations/hr.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../jsp-model2-replyboard/src/main/webapp/js/translations/hu.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../jsp-model2-replyboard/src/main/webapp/js/translations/hy.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../jsp-model2-replyboard/src/main/webapp/js/translations/id.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../jsp-model2-replyboard/src/main/webapp/js/translations/it.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../jsp-model2-replyboard/src/main/webapp/js/translations/ja.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../jsp-model2-replyboard/src/main/webapp/js/translations/jv.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../jsp-model2-replyboard/src/main/webapp/js/translations/km.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../jsp-model2-replyboard/src/main/webapp/js/translations/kn.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../jsp-model2-replyboard/src/main/webapp/js/translations/ko.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../jsp-model2-replyboard/src/main/webapp/js/translations/ku.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../jsp-model2-replyboard/src/main/webapp/js/translations/lt.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../jsp-model2-replyboard/src/main/webapp/js/translations/lv.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../jsp-model2-replyboard/src/main/webapp/js/translations/ms.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../jsp-model2-replyboard/src/main/webapp/js/translations/nb.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../jsp-model2-replyboard/src/main/webapp/js/translations/ne.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../jsp-model2-replyboard/src/main/webapp/js/translations/nl.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../jsp-model2-replyboard/src/main/webapp/js/translations/no.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../jsp-model2-replyboard/src/main/webapp/js/translations/oc.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../jsp-model2-replyboard/src/main/webapp/js/translations/pl.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../jsp-model2-replyboard/src/main/webapp/js/translations/pt-br.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../jsp-model2-replyboard/src/main/webapp/js/translations/pt.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../jsp-model2-replyboard/src/main/webapp/js/translations/ro.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../jsp-model2-replyboard/src/main/webapp/js/translations/ru.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../jsp-model2-replyboard/src/main/webapp/js/translations/si.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../jsp-model2-replyboard/src/main/webapp/js/translations/sk.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../jsp-model2-replyboard/src/main/webapp/js/translations/sl.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../jsp-model2-replyboard/src/main/webapp/js/translations/sq.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../jsp-model2-replyboard/src/main/webapp/js/translations/sr-latn.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../jsp-model2-replyboard/src/main/webapp/js/translations/sr.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../jsp-model2-replyboard/src/main/webapp/js/translations/sv.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../jsp-model2-replyboard/src/main/webapp/js/translations/th.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../jsp-model2-replyboard/src/main/webapp/js/translations/ti.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../jsp-model2-replyboard/src/main/webapp/js/translations/tk.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../jsp-model2-replyboard/src/main/webapp/js/translations/tr.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../jsp-model2-replyboard/src/main/webapp/js/translations/tt.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../jsp-model2-replyboard/src/main/webapp/js/translations/ug.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../jsp-model2-replyboard/src/main/webapp/js/translations/uk.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../jsp-model2-replyboard/src/main/webapp/js/translations/ur.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../jsp-model2-replyboard/src/main/webapp/js/translations/uz.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../jsp-model2-replyboard/src/main/webapp/js/translations/vi.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../jsp-model2-replyboard/src/main/webapp/js/translations/zh-cn.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../jsp-model2-replyboard/src/main/webapp/js/translations/zh.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../jsp-model2/src/main/webapp/WEB-INF/board/delete.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../jsp-model2/src/main/webapp/WEB-INF/board/reply.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../jsp-model2/대댓글 달기 로직" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../jsp05/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/leekiye/mybatis/controller/board/DeleteAllBoard.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/leekiye/mybatis/controller/board/DeleteBoard.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/leekiye/mybatis/controller/board/ListBoard.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/leekiye/mybatis/controller/board/ReplyBoard.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/leekiye/mybatis/controller/board/SearchBoard.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/leekiye/mybatis/controller/board/ViewBoard.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/leekiye/mybatis/controller/board/WriteBoard.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/leekiye/mybatis/controller/index/Index.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/leekiye/mybatis/controller/member/IdCheck.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/leekiye/mybatis/controller/member/InsertMember.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/leekiye/mybatis/controller/member/Login.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/leekiye/mybatis/controller/member/Logout.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/leekiye/mybatis/controller/member/MemberInfo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/leekiye/mybatis/dao/BoardDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/leekiye/mybatis/dao/MemberDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/leekiye/mybatis/dto/BoardDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/leekiye/mybatis/dto/MemberDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/leekiye/mybatis/dto/MessageDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/leekiye/mybatis/dto/PageDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/leekiye/mybatis/dto/SearchDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/leekiye/mybatis/mybatis/MybatisConnectionFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/leekiye/mybatis/utils/CookieManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/leekiye/mybatis/utils/ScriptWriter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/board.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/config.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/db.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/member.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/board/delete.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/board/list.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/board/reply.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/board/serach-list.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/board/view.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/board/write.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/include/alert-modal.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/include/footer.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/include/header.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/include/pass-modal.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/index/index.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/member/info.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/member/insert.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/member/login.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/member/logout.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/css/bootstrap.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/css/common.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/css/sign-in.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/404NOTFOUND.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/500ERROR.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/AREYOUSURE.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/lenu.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/bootstrap.bundle.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/ckeditor.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/jquery-3.7.1.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/translations/af.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/translations/ar.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/translations/ast.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/translations/az.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/translations/bg.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/translations/bn.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/translations/bs.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/translations/ca.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/translations/cs.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/translations/da.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/translations/de-ch.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/translations/de.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/translations/el.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/translations/en-au.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/translations/en-gb.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/translations/eo.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/translations/es-co.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/translations/es.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/translations/et.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/translations/eu.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/translations/fa.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/translations/fi.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/translations/fr.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/translations/gl.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/translations/gu.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/translations/he.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/translations/hi.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/translations/hr.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/translations/hu.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/translations/hy.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/translations/id.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/translations/it.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/translations/ja.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/translations/jv.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/translations/km.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/translations/kn.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/translations/ko.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/translations/ku.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/translations/lt.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/translations/lv.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/translations/ms.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/translations/nb.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/translations/ne.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/translations/nl.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/translations/no.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/translations/oc.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/translations/pl.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/translations/pt-br.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/translations/pt.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/translations/ro.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/translations/ru.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/translations/si.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/translations/sk.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/translations/sl.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/translations/sq.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/translations/sr-latn.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/translations/sr.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/translations/sv.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/translations/th.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/translations/ti.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/translations/tk.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/translations/tr.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/translations/tt.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/translations/ug.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/translations/uk.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/translations/ur.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/translations/uz.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/translations/vi.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/translations/zh-cn.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/translations/zh.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/webContexts.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/leekiye/mybatis/dto/Grade.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/leekiye/mybatis/dto/ModalDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/leekiye/mybatis/filter/BasicFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/leekiye/mybatis/filter/Encoding.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/leekiye/mybatis/filter/LogFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/leekiye/mybatis/filter/LoginFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/leekiye/mybatis/mybatis/GradeTypeHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/defaultusericon.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../html-lecture" beforeDir="false" afterPath="$PROJECT_DIR$/../../html-lecture" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jsp-model2-replyboard/src/main/java/com/leekiye/jspmodel2replyboard/connect/JDBCConnectionPool.java" beforeDir="false" afterPath="$PROJECT_DIR$/../jsp-model2-replyboard/src/main/java/com/leekiye/jspmodel2replyboard/connect/JDBCConnectionPool.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jsp-model2-replyboard/src/main/java/com/leekiye/jspmodel2replyboard/controller/DeleteBoard.java" beforeDir="false" afterPath="$PROJECT_DIR$/../jsp-model2-replyboard/src/main/java/com/leekiye/jspmodel2replyboard/controller/DeleteBoard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jsp-model2-replyboard/src/main/java/com/leekiye/jspmodel2replyboard/controller/ListBoard.java" beforeDir="false" afterPath="$PROJECT_DIR$/../jsp-model2-replyboard/src/main/java/com/leekiye/jspmodel2replyboard/controller/ListBoard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jsp-model2-replyboard/src/main/java/com/leekiye/jspmodel2replyboard/controller/ReplyBoard.java" beforeDir="false" afterPath="$PROJECT_DIR$/../jsp-model2-replyboard/src/main/java/com/leekiye/jspmodel2replyboard/controller/ReplyBoard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jsp-model2-replyboard/src/main/java/com/leekiye/jspmodel2replyboard/controller/SearchBoard.java" beforeDir="false" afterPath="$PROJECT_DIR$/../jsp-model2-replyboard/src/main/java/com/leekiye/jspmodel2replyboard/controller/SearchBoard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jsp-model2-replyboard/src/main/java/com/leekiye/jspmodel2replyboard/controller/ViewBoard.java" beforeDir="false" afterPath="$PROJECT_DIR$/../jsp-model2-replyboard/src/main/java/com/leekiye/jspmodel2replyboard/controller/ViewBoard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jsp-model2-replyboard/src/main/java/com/leekiye/jspmodel2replyboard/controller/WriteBoard.java" beforeDir="false" afterPath="$PROJECT_DIR$/../jsp-model2-replyboard/src/main/java/com/leekiye/jspmodel2replyboard/controller/WriteBoard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jsp-model2-replyboard/src/main/java/com/leekiye/jspmodel2replyboard/dao/BoardDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/../jsp-model2-replyboard/src/main/java/com/leekiye/jspmodel2replyboard/dao/BoardDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jsp-model2-replyboard/src/main/java/com/leekiye/jspmodel2replyboard/dto/BoardDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/../jsp-model2-replyboard/src/main/java/com/leekiye/jspmodel2replyboard/dto/BoardDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jsp-model2-replyboard/src/main/java/com/leekiye/jspmodel2replyboard/utils/CookieManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/../jsp-model2-replyboard/src/main/java/com/leekiye/jspmodel2replyboard/utils/CookieManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jsp-model2-replyboard/src/main/java/com/leekiye/jspmodel2replyboard/utils/ScriptWriter.java" beforeDir="false" afterPath="$PROJECT_DIR$/../jsp-model2-replyboard/src/main/java/com/leekiye/jspmodel2replyboard/utils/ScriptWriter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jsp-model2-replyboard/src/main/webapp/WEB-INF/board/delete.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../jsp-model2-replyboard/src/main/webapp/WEB-INF/board/delete.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jsp-model2-replyboard/src/main/webapp/WEB-INF/board/list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../jsp-model2-replyboard/src/main/webapp/WEB-INF/board/list.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jsp-model2-replyboard/src/main/webapp/WEB-INF/board/reply.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../jsp-model2-replyboard/src/main/webapp/WEB-INF/board/reply.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jsp-model2-replyboard/src/main/webapp/WEB-INF/board/searchlist.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../jsp-model2-replyboard/src/main/webapp/WEB-INF/board/searchlist.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jsp-model2-replyboard/src/main/webapp/WEB-INF/board/view.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../jsp-model2-replyboard/src/main/webapp/WEB-INF/board/view.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jsp-model2-replyboard/src/main/webapp/WEB-INF/board/write.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../jsp-model2-replyboard/src/main/webapp/WEB-INF/board/write.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jsp-model2-replyboard/src/main/webapp/WEB-INF/include/header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../jsp-model2-replyboard/src/main/webapp/WEB-INF/include/header.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jsp-model2-replyboard/src/main/webapp/css/common.css" beforeDir="false" afterPath="$PROJECT_DIR$/../jsp-model2-replyboard/src/main/webapp/css/common.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../jsp-model2/src/main/java/com/leekiye/jspmodel2/dao/BoardDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/../jsp-model2/src/main/java/com/leekiye/jspmodel2/dao/BoardDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../jsp-model2/src/main/java/com/leekiye/jspmodel2/dto/BoardDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/../jsp-model2/src/main/java/com/leekiye/jspmodel2/dto/BoardDto.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../jsp-model2/src/main/webapp/WEB-INF/board/boardlist.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../jsp-model2/src/main/webapp/WEB-INF/board/boardlist.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jsp-model2/src/main/webapp/WEB-INF/board/delete.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../jsp-model2/src/main/webapp/WEB-INF/board/delete.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jsp-model2/src/main/webapp/WEB-INF/board/reply.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../jsp-model2/src/main/webapp/WEB-INF/board/reply.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../jsp-model2/src/main/webapp/WEB-INF/board/view.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../jsp-model2/src/main/webapp/WEB-INF/board/view.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../jsp-model2/src/main/webapp/WEB-INF/include/header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../jsp-model2/src/main/webapp/WEB-INF/include/header.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jsp-model2/대댓글 달기 로직" beforeDir="false" afterPath="$PROJECT_DIR$/../jsp-model2/대댓글 달기 로직" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/leekiye/mybatis/controller/index/Index.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/leekiye/mybatis/controller/index/Index.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/leekiye/mybatis/controller/member/InsertMember.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/leekiye/mybatis/controller/member/InsertMember.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/leekiye/mybatis/controller/member/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/leekiye/mybatis/controller/member/Login.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/leekiye/mybatis/controller/member/MemberInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/leekiye/mybatis/controller/member/MemberInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/leekiye/mybatis/dto/MemberDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/leekiye/mybatis/dto/MemberDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/config.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/member.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/member.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/board/list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/board/list.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/include/footer.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/include/footer.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/include/header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/include/header.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/member/info.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/member/info.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -261,12 +71,16 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Jsp File" />
+        <option value="Enum" />
         <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../../.." />
+  </component>
+  <component name="JspContextManager">
+    <jsp-to-context jsp-file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/include/header.jsp" context-file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/member/insert.jsp" />
   </component>
   <component name="LogFilters">
     <option name="FILTER_ERRORS" value="false" />
@@ -290,21 +104,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "Tomcat Server.Tomcat 10.1.232.executor": "Run",
-    "git-widget-placeholder": "master",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/중앙HTA/Desktop/2024-lecture/2024-lecture/2024-lecture/jsp-lecture/mybatis/src/main/webapp/images",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;Tomcat Server.Tomcat 10.1.232.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/중앙HTA/Desktop/2024-lecture/2024-lecture/2024-lecture/jsp-lecture/mybatis/src/main/webapp/images&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\중앙HTA\Desktop\2024-lecture\2024-lecture\2024-lecture\jsp-lecture\mybatis\src\main\webapp\images" />
@@ -433,6 +248,9 @@
       <workItem from="1717114203646" duration="12982000" />
       <workItem from="1717127365434" duration="44000" />
       <workItem from="1717132662455" duration="12688000" />
+      <workItem from="1717373374900" duration="27288000" />
+      <workItem from="1717405619715" duration="356000" />
+      <workItem from="1717459361172" duration="2583000" />
     </task>
     <servers />
   </component>
@@ -446,6 +264,11 @@
           <url>file://$PROJECT_DIR$/src/main/java/com/leekiye/mybatis/controller/member/IdCheck.java</url>
           <line>17</line>
           <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/leekiye/mybatis/filter/LoginFilter.java</url>
+          <line>13</line>
+          <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

@@ -11,5 +11,30 @@
         <p class="text-center text-body-secondary">© 2024 Company, Inc</p>
     </footer>
 </div>
-</body>
-</html>
+<!-- Modal session request session에 들어가 있는 modal값 쓰고 나서 지워버리기 -->
+<c:if test="${modal.isState eq 'show'}">
+    <div class="modal fade" id="modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">${modal.title}</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                        ${modal.msg}
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">CLOSE</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        const modal = new bootstrap.Modal("#modal");
+        modal.show();
+    </script>
+    <c:remove var="modal" scope="session">
+    <%-- modal 이라는 세션을 삭제함 => 로그인 메세지가 자꾸 뜨는것을 방지 --%>
+    </c:remove>
+</c:if>
+

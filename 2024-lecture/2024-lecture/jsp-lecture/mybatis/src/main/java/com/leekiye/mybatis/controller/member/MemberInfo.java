@@ -16,9 +16,10 @@ public class MemberInfo extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String userID = req.getParameter("userID");
-        MemberDao memberDao = new MemberDao();
 
+        MemberDao memberDao = new MemberDao();
         MemberDto infoMemberDto = memberDao.infoMember(userID);
+
         req.setAttribute("infoMemberDto",infoMemberDto);
         RequestDispatcher dispatcher = req.getRequestDispatcher("/WEB-INF/member/info.jsp");
         dispatcher.forward(req, resp);

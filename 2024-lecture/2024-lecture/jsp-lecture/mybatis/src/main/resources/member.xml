@@ -33,7 +33,7 @@
         WHERE USERID = #{userID}
     </select>
 
-    <select id="infoMember" resultType="MemberDto">
+    <select id="infoMember" resultType="MemberDto" parameterType="String">
         SELECT * FROM MEMBER
         WHERE USERID = #{userID}
     </select>
